@@ -5,8 +5,9 @@ const handleGreeting = (req, res) => {
 };
 
 const handleGetStudents = (req, res) => {
-    const studentsdata = studentModel.getAllStudents();
-    res.json(studentsData);
+   const studentsData = studentModel.getAllStudents();
+   res.json(studentsData)
+   
 };
 
 const studentController = {

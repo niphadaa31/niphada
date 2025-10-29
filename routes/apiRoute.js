@@ -1,11 +1,13 @@
 const express = require("express");
-const courseController = require("../controllers/courseController");
+const todotrackerController = require("../controller/todotrackerController");
+const studentController = require("../controller/studentController");
+const courseContorller = require("../controller/courseController");
 const apiRouter = express.Router();
 
-//Root path: /
-apiRouter.get("/", courseController.handleGreeting);
+apiRouter.get("/", todotrackerController.handleGreeting);
 
-//Students path: /student
-apiRouter.get("/courses", courseController.handleGetCourse);
+apiRouter.get("/todotrackers", todotrackerController.handleGetTodotrackers);
+apiRouter.get("/students", studentController.handleGetStudents);
+apiRouter.get("/courses", courseContorller.handleGetCourses);
 
 module.exports = apiRouter;

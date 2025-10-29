@@ -4,9 +4,8 @@ const apiRouter = require("./routes/apiRoute");
 const app = express();
 const port = 3000;
 
-//Use the imported router for all paths
 app.use("/", apiRouter);
 
 app.listen(port, () => {
-    console.log(`Lao-top API running at http://localhost:${port}`);
-})
+    console.log(`Todo tracker API running at http://localhost:${port}`);
+});
